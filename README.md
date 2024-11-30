@@ -6,8 +6,8 @@ Họ tên: [Lê Minh Thư]
 MSSV: [21025781]
 
 ## Đề bài thực hành tuần 5 môn Lập trình WWW:
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/2e6acd51-3b32-4c02-8e66-ae69377d016d)
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/b7eeb710-beb2-4f27-af48-655f93a639f5)
+![image](https://github.com/user-attachments/assets/6e77c520-49e4-4bbc-a59e-5663d138cc4b)
+![image](https://github.com/user-attachments/assets/ce9d95be-f735-464d-b273-05aa2ef29d50)
 
 
 ## Mô tả
@@ -145,7 +145,10 @@ git clone [https://github.com/LMThu2811/www_lab_week5.git](https://github.com/LM
       `type` tinyint(4) DEFAULT NULL CHECK (`type` between 0 and 2),
       PRIMARY KEY (`skill_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
    ```
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/285f1223-e045-4f06-8e58-4eca94481a2a)
+![image](https://github.com/user-attachments/assets/06c98373-e8d4-4bcb-9ce3-9b849a9e205c)
+
+
+
 
 6. **Cấu trúc project:**
   - **models:** Package chứa các lớp mô hình (entities) của cơ sở dữ liệu.
@@ -167,14 +170,22 @@ git clone [https://github.com/LMThu2811/www_lab_week5.git](https://github.com/LM
     + JobSkillDao: chứa các hàm addJobSkill, calcProposedSalary.
 7. **Chạy ứng dụng:**
 
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/4f3424a2-ef8b-40ef-a05f-3dbec5f223af)
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/096ef70a-454d-4609-be8e-83d22b4513f9)
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/39522272-888b-4cd9-87aa-8b648d403970)
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/8a312173-06b2-4fc8-acff-10db8efeaa2e)
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/90351578-5afb-4545-89fe-cc4c0b5e98c7)
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/2084f985-9dbc-44d9-879b-31c9e01a4a01)
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/87883ce0-0416-4684-9f5a-dd3fdcc84e37)
-![image](https://github.com/ngocmai1522k2/www_lab_week5/assets/144517477/c773ba45-bf2e-408b-b27a-df5f54756457)
+![image](https://github.com/user-attachments/assets/b737a92a-f1c1-44d0-962f-c1f8573213ac)
+![image](https://github.com/user-attachments/assets/2b1dc615-2881-438b-8fe6-4b2cf891f4e7)
+![image](https://github.com/user-attachments/assets/243de3b9-f2c7-4efb-bbd8-9fe7d13b223a)
+![image](https://github.com/user-attachments/assets/df6437b1-79f4-40a4-9397-edebd5787a1d)
+![image](https://github.com/user-attachments/assets/292b58f9-bc46-4622-82ec-b827b7de41e2)
+![image](https://github.com/user-attachments/assets/28fcaf77-62b6-434a-b4a7-47a85b53653d)
+![image](https://github.com/user-attachments/assets/1764722f-3eff-4e85-b00e-744a345b6c86)
+![image](https://github.com/user-attachments/assets/94405719-2ada-445e-903c-07e822499cc0)
+
+
+
+
+
+
+
+
 
 
 
@@ -187,14 +198,7 @@ git clone [https://github.com/LMThu2811/www_lab_week5.git](https://github.com/LM
 - [Git Version Control](https://git-scm.com/book/en/v2)
 
 
-## Đóng góp
 
-Nếu bạn muốn đóng góp vào dự án hoặc báo cáo lỗi, vui lòng tạo issue hoặc gửi pull request vào repository GitHub của dự án.
 
-- GitHub Repository: [www_lab_week5](https://github.com/ngocmai1522k2/www_lab_week5)
-- Tạo issue mới: [Tạo issue](https://github.com/ngocmai1522k2/www_lab_week5/issues/new)
-- Gửi pull request: [Gửi pull request](https://github.com/ngocmai1522k2/www_lab_week5/compare)
-
-Chúng tôi rất hoan nghênh mọi đóng góp từ cộng đồng!
-
+- GitHub Repository: [WWW_Lab05](https://github.com/LMThu28/WWW_Lab05)
 ---
