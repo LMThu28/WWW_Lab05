@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách kỹ năng</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Danh sách kỹ năng</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Tên kỹ năng</th>
+            <th>Mô tả</th>
+            <th>Phân loại</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="skill : ${skills}">
+            <td th:text="${skill.getSkill_name()}"></td>
+            <td th:text="${skill.getSkill_desc()}"></td>
+            <td>
+                <span th:if="${skill.getSkill_type() == 0}">BASE</span>
+                <span th:if="${skill.getSkill_type() == 1}">SOFT</span>
+                <span th:if="${skill.getSkill_type() == 2}">HARD</span>
+            </td>
+            <td>
+                <a th:href="@{'/cand-by-skill/' + ${skill.getSkill_id()}}" class="btn btn-success">Tìm ứng viên</a>
+                <a th:href="@{'/update-skill/' + ${skill.getSkill_id()}}" class="btn btn-warning">Sửa</a>
+                <a th:href="@{'/delete-skill/' + ${skill.getSkill_id()}}" class="btn btn-danger">Xóa</a>
+                <a th:href="@{'/active-skill/' + ${skill.getSkill_id()}}" class="btn btn-info">Active</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/add-skill}" class="btn btn-primary">Thêm kỹ năng</a>
+    <!-- Pagination -->
+    <div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <!-- Page Links -->
+                <li th:each="i : ${#numbers.sequence(0, totalPages - 1)}" th:class="${currentPage == i} ? 'page-item active' : 'page-item'">
+                    <a class="page-link" th:href="@{'/skill' + '?page=' + ${i} + '&size=' + ${pageSize}}" th:text="${i + 1}"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

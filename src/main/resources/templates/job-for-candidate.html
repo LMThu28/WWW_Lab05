@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Công việc cho bạn</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h2>Công việc cho bạn</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Tên công việc</th>
+            <th>Mô tả công việc</th>
+            <th>Tên công ty</th>
+            <th>Mức lương đề xuất</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Sử dụng Thymeleaf để lặp qua danh sách công việc và giá trị price -->
+        <tr th:each="entry : ${mapJob}">
+            <td th:text="${entry.key.getJob_name()}"></td>
+            <td th:text="${entry.key.getJob_desc()}"></td>
+            <td th:text="${entry.key.getCompany().getComp_name()}"></td>
+            <td th:text="${entry.value} + ' $'"></td>
+            <td>
+                <a href="" class="btn btn-success">Apply</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{'/skill-to-learn/' + ${candID}}"
+       class="btn btn-warning">Skill bạn chưa có?</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
