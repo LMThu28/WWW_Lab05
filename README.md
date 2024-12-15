@@ -6,10 +6,8 @@ Họ tên: [Lê Minh Thư]
 MSSV: [21025781]
 
 ## Đề bài thực hành tuần 5 môn Lập trình WWW:
-![image](https://github.com/user-attachments/assets/6e77c520-49e4-4bbc-a59e-5663d138cc4b)
-![image](https://github.com/user-attachments/assets/ce9d95be-f735-464d-b273-05aa2ef29d50)
-
-
+![img_4.png](img/img_4.png)
+![img_12.png](img/img_12.png)
 ## Mô tả
 
 Dự án Jakarta EE này được phát triển để quản lý  trang web cho phép công ty đăng tin tuyển người với các skill mong muốn. Các ứng viên khi log vào sẽ được gợi ý các công việc có skill phù hợp với mình và đề xuất các skill nhân viên có thể học. Giúp các công ty tìm các ứng viên có skill phù hợp và các yêu cầu khác.
@@ -145,47 +143,35 @@ git clone [https://github.com/LMThu2811/www_lab_week5.git](https://github.com/LM
       `type` tinyint(4) DEFAULT NULL CHECK (`type` between 0 and 2),
       PRIMARY KEY (`skill_id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
    ```
-![image](https://github.com/user-attachments/assets/06c98373-e8d4-4bcb-9ce3-9b849a9e205c)
-
-
-
+![img_13.png](img/img_13.png)
 
 6. **Cấu trúc project:**
-  - **models:** Package chứa các lớp mô hình (entities) của cơ sở dữ liệu.
+  ![img.png](img/img.png)
 
-    + Address.java: Đại diện cho thông tin địa chỉ.
-    + Candidate.java: Đại diện cho thông tin ứng viên.
-    + CandidateSkill.java: Đại diện cho kỹ năng của ứng viên.
-    + Company.java: Đại diện cho thông tin công ty.
-    + Job.java: Đại diện cho thông tin công việc.
-    + JobSkill.java: Đại diện cho kỹ năng yêu cầu của công việc.
-    + Skill.java: Đại diện cho thông tin kỹ năng.
-
- - **dao:** Bao gồm các DAO (Data Access Object) chứa các phương thức để truy cập và thao tác dữ liệu trong cơ sở dữ liệu.
-    + CandidateDao: chứa các hàm logIn, getCandByYearBorn, getTotalSkillByCand, getTotalJobSkillByCand.
-    + CandidateSkillDao: chứa các hàm getJobForCandidateOrderBySkill, getSkillNotHaveToLearn, getCandidateOrderBySkill.
-    + CompanyDao: chứa hàm logIn.
-    + ExperienceDao: chứa các hàm getMaxExpYearCandidate, getNotHaveExpCandidate.
-    + JobDao: chứa các hàm getAllJobList, getAll.
-    + JobSkillDao: chứa các hàm addJobSkill, calcProposedSalary.
-7. **Chạy ứng dụng:**
-
-![image](https://github.com/user-attachments/assets/b737a92a-f1c1-44d0-962f-c1f8573213ac)
-![image](https://github.com/user-attachments/assets/2b1dc615-2881-438b-8fe6-4b2cf891f4e7)
-![image](https://github.com/user-attachments/assets/243de3b9-f2c7-4efb-bbd8-9fe7d13b223a)
-![image](https://github.com/user-attachments/assets/df6437b1-79f4-40a4-9397-edebd5787a1d)
-![image](https://github.com/user-attachments/assets/292b58f9-bc46-4622-82ec-b827b7de41e2)
-![image](https://github.com/user-attachments/assets/28fcaf77-62b6-434a-b4a7-47a85b53653d)
-![image](https://github.com/user-attachments/assets/1764722f-3eff-4e85-b00e-744a345b6c86)
-![image](https://github.com/user-attachments/assets/94405719-2ada-445e-903c-07e822499cc0)
-
-
-
-
-
-
-
-
+7. **Chạy ứng dụng:** 
+   - Chạy ứng dụng bằng cách chạy lệnh sau trong terminal của IntelliJ IDEA:
+   ```
+   mvn spring-boot:run
+   ```
+   - Truy cập ứng dụng qua địa chỉ: [http://localhost:8080](http://localhost:8080)
+**Home**
+![img_6.png](img/img_6.png)
+**Đăng nhập với tư cách nhà tuyển dụng**
+![img_1.png](img/img_1.png)
+**Thêm công việc**
+![img_2.png](img/img_2.png)
+**Danh sách công việc**
+![img_3.png](img/img_3.png)
+**Đăng nhập với tư cách ứng viên**
+![img_10.png](img/img_10.png)
+**Các công việc dành cho bạn**
+![img_11.png](img/img_11.png)
+**Chi tiết công việc**
+![img_5.png](img/img_5.png)
+**Danh sách các ứng viên có thể nhận đào tạo**
+![img_9.png](img/img_9.png)
+**Danh sách các kỹ năng**
+![img_8.png](img/img_8.png)
 
 
 
@@ -198,7 +184,14 @@ git clone [https://github.com/LMThu2811/www_lab_week5.git](https://github.com/LM
 - [Git Version Control](https://git-scm.com/book/en/v2)
 
 
+## Đóng góp
 
+Nếu bạn muốn đóng góp vào dự án hoặc báo cáo lỗi, vui lòng tạo issue hoặc gửi pull request vào repository GitHub của dự án.
 
 - GitHub Repository: [WWW_Lab05](https://github.com/LMThu28/WWW_Lab05)
+- Tạo Issue:[Issues](https://github.com/LMThu28/WWW_Lab05/issues/new)
+- Gửi Pull request: [Pull requests](https://github.com/LMThu28/WWW_Lab05/pulls)
+
+Chúng tôi rất hoan nghênh mọi đóng góp từ cộng đồng!
+
 ---
